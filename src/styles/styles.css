@@ -1,0 +1,93 @@
+/* Design tokens and base resets. Component styles live in their own *.module.css files. */
+
+:root {
+  --color-page: #0f0e24;
+  --color-page-raised: #12102b;
+  --color-surface: #1a1838;
+  --color-surface-inset: #14122e;
+  --color-surface-active: #201d48;
+  --color-border: #3b3868;
+  --color-border-soft: #25234f;
+  --color-track: #2f2c5e;
+
+  --color-text: #f4f2ff;
+  --color-text-soft: #c9c6e8;
+  --color-text-muted: #a9a6c9;
+
+  --color-lime: #c8f25a;
+  --color-lime-hover: #d9ff7a;
+  --color-violet: #8b7bff;
+  --color-coral: #ff8a6b;
+  --color-amber: #ffc857;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-card: 28px;
+  --container-width: 1160px;
+  --gutter: 24px;
+
+  /* Component tokens. A theme (see glass-theme.css) overrides these without touching component CSS. */
+  --card-background: var(--color-surface);
+  --card-border: var(--color-border);
+  --card-backdrop: none;
+  --card-shadow: none;
+  --tab-border: var(--color-border);
+  --tab-hover-border: var(--color-violet);
+  --tab-selected-bg: var(--color-text);
+  --category-selected-glow: none;
+  --bar-glow-safe: none;
+  --bar-glow-warning: none;
+  --bar-glow-limit: none;
+  --bar-shine: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  background-image: radial-gradient(#1b1940 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-violet);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

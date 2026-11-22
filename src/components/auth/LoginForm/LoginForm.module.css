@@ -1,0 +1,60 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.forgotRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-lime);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.submit {
+  width: 100%;
+}
+
+.status {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-lime);
+}
+
+.status:empty {
+  display: none;
+}
+
+.signUp {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}

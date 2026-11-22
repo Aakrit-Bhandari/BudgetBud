@@ -1,0 +1,57 @@
+.track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-track);
+  overflow: hidden;
+}
+
+.slim {
+  height: 8px;
+}
+
+.fill {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* A light sweep across the bar. Hidden unless a theme sets --bar-shine: block. */
+.fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: var(--bar-shine);
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: barShine 3.2s ease-in-out infinite;
+}
+
+@keyframes barShine {
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill::after {
+    animation: none;
+  }
+}
+
+.safe {
+  background: var(--color-lime);
+  box-shadow: var(--bar-glow-safe);
+}
+
+.warning {
+  background: var(--color-amber);
+  box-shadow: var(--bar-glow-warning);
+}
+
+.limit {
+  background: var(--color-coral);
+  box-shadow: var(--bar-glow-limit);
+}

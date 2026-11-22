@@ -1,0 +1,27 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(60% 50% at 50% 58%, rgba(139, 123, 255, 0.2), transparent 70%);
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Extra right padding leaves room for the snout, which sticks out of the pig. */
+.main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px calc(var(--gutter) + 40px) 80px var(--gutter);
+}
+
+@media (max-width: 639px) {
+  .main {
+    padding: 24px 52px 64px 12px;
+  }
+}

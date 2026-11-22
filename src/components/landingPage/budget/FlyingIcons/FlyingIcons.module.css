@@ -1,0 +1,41 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+  animation: iconFliesInArc 1.6s ease-out both;
+}
+
+@keyframes iconFliesInArc {
+  0% {
+    transform: translate(0, 0) scale(0.2) rotate(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+    transform: translate(calc(var(--drift-x) * 0.1), calc(var(--rise-y) * 0.2)) scale(1.15)
+      rotate(calc(var(--spin) * 0.1));
+  }
+  55% {
+    opacity: 1;
+    transform: translate(calc(var(--drift-x) * 0.6), var(--rise-y)) scale(1) rotate(calc(var(--spin) * 0.6));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift-x), calc(var(--rise-y) + 150px)) scale(0.7) rotate(var(--spin));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    display: none;
+  }
+}

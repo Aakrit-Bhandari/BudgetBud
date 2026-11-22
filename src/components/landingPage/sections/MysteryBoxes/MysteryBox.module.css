@@ -1,0 +1,119 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 236px;
+  padding: 20px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 24px;
+  background: var(--color-surface-inset);
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-violet);
+}
+
+.openBox {
+  border-color: var(--color-lime);
+  background: var(--color-surface-active);
+}
+
+.closedContent,
+.reveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closedContent {
+  gap: 14px;
+}
+
+.reveal {
+  gap: 10px;
+  animation: featurePopsOut 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+.gift {
+  transform-origin: 50% 90%;
+  animation: giftWobble 2.8s ease-in-out infinite;
+}
+
+.closedTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.featureName {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.featureDescription {
+  max-width: 240px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-soft);
+}
+
+.comingSoonBadge {
+  margin-top: 4px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-lime);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-page);
+}
+
+@keyframes giftWobble {
+  0%,
+  70%,
+  100% {
+    transform: rotate(0);
+  }
+  74% {
+    transform: rotate(-6deg);
+  }
+  78% {
+    transform: rotate(6deg);
+  }
+  82% {
+    transform: rotate(-4deg);
+  }
+  86% {
+    transform: rotate(3deg);
+  }
+  90% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes featurePopsOut {
+  0% {
+    transform: scale(0.4) translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gift,
+  .reveal {
+    animation: none;
+  }
+}

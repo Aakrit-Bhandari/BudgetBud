@@ -1,0 +1,32 @@
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tab {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1.5px solid var(--tab-border);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.tab:hover {
+  border-color: var(--tab-hover-border);
+  color: var(--color-text);
+}
+
+.selectedTab {
+  background: var(--tab-selected-bg);
+  border-color: var(--tab-selected-bg);
+  color: var(--color-page);
+}
+
+.selectedTab:hover {
+  color: var(--color-page);
+}

@@ -1,0 +1,219 @@
+.pig {
+  --snout-reach: 58px;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* The round body. A highlight and inner shadows make it read as a ball. */
+.body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1.5px solid var(--color-border);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 24%, #2a2766 0%, var(--color-surface) 42%, var(--color-surface-inset) 100%);
+  box-shadow:
+    inset -26px -34px 70px rgba(8, 6, 30, 0.55),
+    inset 16px 18px 44px rgba(139, 123, 255, 0.14),
+    0 40px 90px rgba(5, 3, 30, 0.55);
+}
+
+.body::before {
+  content: '';
+  position: absolute;
+  top: 7%;
+  left: 15%;
+  width: 34%;
+  height: 20%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(244, 242, 255, 0.16), transparent 70%);
+  transform: rotate(-24deg);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  width: 58%;
+}
+
+.eye {
+  position: absolute;
+  top: 28%;
+  left: 80%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-page);
+  box-shadow: 0 0 0 4px rgba(139, 123, 255, 0.22);
+}
+
+/* Parts that sit behind the body: ears, legs and tail. */
+.part {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+}
+
+.ear {
+  top: 3%;
+  width: 84px;
+  height: 84px;
+  border-radius: 12px 80% 12px 80%;
+}
+
+.ear::after {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border-radius: inherit;
+  background: rgba(139, 123, 255, 0.3);
+}
+
+.earLeft {
+  left: 9%;
+  transform: rotate(-22deg) scaleX(-1);
+}
+
+.earRight {
+  right: 9%;
+  transform: rotate(22deg);
+}
+
+.leg {
+  bottom: -34px;
+  width: 72px;
+  height: 96px;
+  border-radius: 22px 22px 26px 26px;
+}
+
+.legLeft {
+  left: 22%;
+}
+
+.legRight {
+  right: 22%;
+}
+
+.tail {
+  position: absolute;
+  z-index: 1;
+  top: 56%;
+  left: -30px;
+  width: 44px;
+  height: 52px;
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+/* The snout sits in front of the body so the nose is always visible. */
+.snout {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: calc(100% - 52px);
+  width: 110px;
+  height: 88px;
+  margin-top: -44px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #2e2a70, var(--color-surface-active) 70%);
+  box-shadow: inset -8px -10px 18px rgba(8, 6, 30, 0.45);
+}
+
+.nostril {
+  position: absolute;
+  right: 22px;
+  width: 13px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-page);
+}
+
+.nostrilTop {
+  top: 18px;
+}
+
+.nostrilBottom {
+  bottom: 18px;
+}
+
+/* A static coin slot. It does not light up when money arrives. */
+.slot {
+  position: absolute;
+  z-index: 4;
+  top: -8px;
+  left: 50%;
+  width: 120px;
+  height: 16px;
+  margin-left: -60px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-page);
+}
+
+/* Narrow screens: the ball becomes a tall, rounded egg so the form still fits. */
+@media (max-width: 639px) {
+  .body {
+    aspect-ratio: auto;
+    padding: 70px 36px 52px;
+    border-radius: 50% / 30%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .eye {
+    top: 20%;
+    left: auto;
+    right: 14px;
+  }
+
+  .ear {
+    top: -16px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .earLeft {
+    left: 12%;
+  }
+
+  .earRight {
+    right: 12%;
+  }
+
+  .tail {
+    left: -24px;
+    width: 36px;
+  }
+
+  .snout {
+    left: calc(100% - 40px);
+    width: 84px;
+    height: 68px;
+    margin-top: -34px;
+  }
+
+  .nostril {
+    right: 14px;
+    width: 10px;
+    height: 17px;
+  }
+
+  .nostrilTop {
+    top: 14px;
+  }
+
+  .nostrilBottom {
+    bottom: 14px;
+  }
+}

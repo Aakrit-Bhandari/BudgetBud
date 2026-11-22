@@ -1,0 +1,28 @@
+/*
+ * Glass theme: dark, see-through panels with a frosted blur.
+ * Add the `theme-glass` class to any wrapper and every Card, tab, category row and
+ * progress bar inside it picks up the look. The tokens it overrides are listed in global.css.
+ */
+.theme-glass {
+  --color-border: rgba(255, 255, 255, 0.16);
+  --color-track: rgba(255, 255, 255, 0.1);
+  --color-surface-inset: rgba(15, 14, 36, 0.4);
+  --color-surface-active: rgba(139, 123, 255, 0.16);
+
+  --card-background: linear-gradient(135deg, rgba(26, 24, 56, 0.62), rgba(15, 14, 36, 0.5));
+  --card-border: rgba(255, 255, 255, 0.16);
+  --card-backdrop: blur(24px) saturate(170%);
+  --card-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 30px 70px rgba(5, 3, 30, 0.5);
+
+  --tab-border: transparent;
+  --tab-hover-border: transparent;
+  --tab-selected-bg: var(--color-lime);
+  --category-selected-glow: 0 0 0 1px rgba(139, 123, 255, 0.5), 0 10px 34px rgba(139, 123, 255, 0.28);
+
+  --bar-glow-safe: 0 0 14px rgba(200, 242, 90, 0.55);
+  --bar-glow-warning: 0 0 14px rgba(255, 200, 87, 0.5);
+  --bar-glow-limit: 0 0 14px rgba(255, 138, 107, 0.5);
+  --bar-shine: block;
+}

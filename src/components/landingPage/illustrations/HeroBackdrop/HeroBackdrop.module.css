@@ -1,0 +1,48 @@
+.backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.piggyOutline {
+  position: absolute;
+  top: 40px;
+  right: -70px;
+  opacity: 0.7;
+}
+
+.coinStack {
+  position: absolute;
+  bottom: 60px;
+  left: -30px;
+  opacity: 0.7;
+  animation-delay: -3s;
+}
+
+.growthLine {
+  position: absolute;
+  top: 18px;
+  left: 46%;
+  opacity: 0.8;
+}
+
+.floating {
+  animation: gentleFloat 7s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-14px) rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating {
+    animation: none;
+  }
+}

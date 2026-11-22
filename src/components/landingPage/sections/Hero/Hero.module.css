@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  padding: 56px 0 96px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 56px;
+}
+
+.copy {
+  flex: 1 1 440px;
+  min-width: 0;
+}
+
+.announcement {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-soft);
+}
+
+.announcementDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-lime);
+}
+
+.headline {
+  margin: 24px 0 20px;
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.headlineAccent {
+  color: var(--color-lime);
+}
+
+.subheadline {
+  max-width: 520px;
+  margin-bottom: 36px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.preview {
+  display: flex;
+  flex: 1 1 360px;
+  justify-content: center;
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .headline {
+    font-size: 44px;
+  }
+}

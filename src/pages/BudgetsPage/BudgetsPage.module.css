@@ -1,0 +1,36 @@
+/* The solid page color also hides the dotted body background, so the glass sits on plain dark. */
+.page {
+  min-height: 100vh;
+  background: var(--color-page);
+}
+
+.topBar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content {
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+
+.tabsBar {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 24px;
+  padding: 6px;
+  overflow-x: auto;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--card-background);
+  -webkit-backdrop-filter: var(--card-backdrop);
+  backdrop-filter: var(--card-backdrop);
+  box-shadow: var(--card-shadow);
+}
+
+.panels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 22px;
+}

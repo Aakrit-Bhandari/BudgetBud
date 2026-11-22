@@ -1,0 +1,48 @@
+.categoryButton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid transparent;
+  border-radius: 16px;
+  background: var(--color-surface-inset);
+  text-align: left;
+  transition: transform 0.12s, border-color 0.15s, background 0.15s;
+}
+
+.categoryButton:hover {
+  border-color: var(--color-border);
+}
+
+.categoryButton:active {
+  transform: scale(0.97);
+}
+
+.selectedCategory {
+  border-color: var(--color-violet);
+  background: var(--color-surface-active);
+  box-shadow: var(--category-selected-glow);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.categoryName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.amounts {
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.statusText {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
