@@ -1,4 +1,4 @@
-# Tally
+# BudgetBud
 
 Tally is a budget tracker that keeps you in the know. Create budgets, split them into categories, see every transaction behind them, and get a short summary at the end of each day.
 
