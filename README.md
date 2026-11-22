@@ -1,6 +1,6 @@
 # BudgetBud
 
-Tally is a budget tracker that keeps you in the know. Create budgets, split them into categories, see every transaction behind them, and get a short summary at the end of each day.
+BudgetBud is a budget tracker that keeps you in the know. Create budgets, split them into categories, see every transaction behind them, and get a short summary at the end of each day.
 
 This repository is the **frontend**, built with React and TypeScript in an [Nx](https://nx.dev) workspace.
 
@@ -19,7 +19,7 @@ This repository is the **frontend**, built with React and TypeScript in an [Nx](
 
 | Page | What it shows |
 | --- | --- |
-| Landing page | What Tally does, a live budget demo, the daily summary and the upcoming features |
+| Landing page | What BudgetBud does, a live budget demo, the daily summary and the upcoming features |
 | Login | The sign-in form, inside a round piggy bank with coins and notes falling into it |
 | Budget tracker | Your budgets, categories and transactions in a dark glass theme |
 
@@ -38,7 +38,7 @@ Nothing in this section is built yet. It is what comes next.
 
 ### 1. AI budget suggestions
 
-Tally will look at your past spending and suggest a better budget, so you do not have to guess your limits.
+BudgetBud will look at your past spending and suggest a better budget, so you do not have to guess your limits.
 
 - **Suggested limits.** Propose a limit for each category based on what you actually spend.
 - **Rebalancing.** Point out when one category keeps running over while another sits unused, and suggest moving money between them.
@@ -50,7 +50,7 @@ What it needs: a back end that stores real transaction history, an AI service be
 
 ### 2. Email alerts for low budget in a category
 
-Tally will email you when a category is running low, so you hear about it before the money is gone.
+BudgetBud will email you when a category is running low, so you hear about it before the money is gone.
 
 - **Alert levels.** One email when a category passes *Close to the limit* (80%) and another when it reaches *Limit reached* (100%).
 - **Your thresholds.** Choose the percentage and which categories you want alerts for.
